@@ -85,7 +85,7 @@ public class EntitySmallCrab extends EntityWaterMob
 
 	public EnumCreatureAttribute getCreatureAttribute()
 	{
-		return EnumCreatureAttribute.UNDEFINED;
+		return EnumCreatureAttribute.ARTHROPOD;
 	}
 
 	/**
