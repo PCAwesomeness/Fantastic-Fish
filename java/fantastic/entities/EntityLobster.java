@@ -83,7 +83,7 @@ public class EntityLobster extends EntityWaterMob
 
 	public EnumCreatureAttribute getCreatureAttribute()
 	{
-		return EnumCreatureAttribute.UNDEFINED;
+		return EnumCreatureAttribute.ARTHROPOD;
 	}
 
 	/**
