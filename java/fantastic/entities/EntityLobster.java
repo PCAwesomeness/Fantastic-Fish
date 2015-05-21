@@ -4,8 +4,8 @@ import java.util.Random;
 
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAvoidEntity;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
-import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
@@ -36,7 +36,7 @@ public class EntityLobster extends EntityWaterMob
 		super(par1World);
 		this.setTexture(par2);
         this.getNavigator().setAvoidsWater(false);
-		this.tasks.addTask(7, new EntityAILookIdle(this));
+	this.tasks.addTask(1, new EntityAIAvoidEntity(this, EntityPlayer.class, 5, 0.4F, 0.5F));
 		this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 0.4D));
 		this.tasks.addTask(6, new EntityAIWander(this, 0.4D));
 		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 10.0F));
